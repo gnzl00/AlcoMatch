@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #5c4db1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5c4db1;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #c7f0db, #e8eafc);
+    padding: 3rem 2rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #3c3b6e;
+}
+
+.hero button {
+    background-color: #5c4db1;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sobre-nosotros,
+.caracteristicas,
+.contacto {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.caracteristicas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristicas li {
+    background-color: #e3f2fd;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 5px;
+}
+
+form input, form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #5c4db1;
+    color: white;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    color: #777;
+}
