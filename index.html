@@ -1,96 +1,269 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AlcoMatch</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/CSS/styles.css">
+  <meta name="description" content="AlcoMatch crea rutas de cocteleria personalizadas con analitica de gustos e inventario.">
+  <title>AlcoMatch | Mix Intelligence Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
+  <div class="page-glow glow-one" aria-hidden="true"></div>
+  <div class="page-glow glow-two" aria-hidden="true"></div>
+  <div class="page-grid-overlay" aria-hidden="true"></div>
 
-  <header class="bg-dark text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="h3 mb-0">AlcoMatch 🍸</h1>
-      <nav>
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link text-white" href="#sobre">Sobre nosotros</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#caracteristicas">Características</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
-        </ul>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="Inicio AlcoMatch">
+        <span class="brand-mark">AM</span>
+        <span class="brand-copy">
+          <strong>AlcoMatch</strong>
+          <small>Mix Intelligence Studio</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#experiencia">Experiencia</a>
+        <a href="#funciona">Como funciona</a>
+        <a href="#escenarios">Escenarios</a>
+        <a href="#comunidad">Comunidad</a>
       </nav>
+
+      <button class="button button-ghost nav-cta" data-download="true">Entrar a beta</button>
     </div>
   </header>
 
-  <section class="hero text-center bg-light py-5">
-    <div class="container">
-      <h2>¡Descubre tu bebida ideal!</h2>
-      <p class="lead">AlcoMatch aprende tus gustos y te sugiere combinaciones únicas. ¡Haz match con tu próxima copa favorita!</p>
-      <button class="btn btn-primary" onclick="descargarApp()">Descargar App</button>
-    </div>
-  </section>
-
-  <section id="sobre" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">¿Qué es AlcoMatch?</h2>
-      <p class="text-center">AlcoMatch es una app inteligente que analiza tus preferencias alcohólicas y sugiere combinaciones basadas en lo que tienes en casa. Aprende de ti, como TikTok, ¡pero con cócteles y cubatas!</p>
-    </div>
-  </section>
-
-  <section id="caracteristicas" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Características</h2>
-      <ul class="list-unstyled text-center">
-        <li>🎯 Recomendaciones personalizadas</li>
-        <li>📦 Gestión de tu inventario de bebidas</li>
-        <li>🍹 Recetas de combinaciones únicas</li>
-        <li>✨ Interfaz intuitiva y moderna</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contacto" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contáctanos</h2>
-      <form action="https://formspree.io/f/xaneaane" method="POST" class="row g-3 needs-validation" novalidate>
-        <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Tu nombre" name="name" required>
+  <main id="top">
+    <section class="hero reveal">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">PLATAFORMA DE RECOMENDACION SOCIAL</p>
+          <h1>Tu proxima mezcla perfecta nace de datos, no de suerte.</h1>
+          <p class="hero-intro">
+            AlcoMatch cruza perfil de sabor, inventario real y contexto del momento para crear sugerencias
+            con criterio profesional y un ritmo visual pensado para comunidad.
+          </p>
+          <div class="hero-actions">
+            <button class="button button-solid" data-download="true">Descargar app</button>
+            <a class="button button-outline" href="#contacto">Solicitar demo</a>
+          </div>
+          <ul class="hero-badges">
+            <li>Motor de recomendacion modular</li>
+            <li>Inventario sincronizado por etiquetas</li>
+            <li>Experiencia adaptable a eventos</li>
+          </ul>
         </div>
-        <div class="col-md-6">
-          <input type="email" class="form-control" placeholder="Tu email" name="email" required>
-        </div>
-        <div class="col-12">
-          <textarea class="form-control" placeholder="Tu mensaje" rows="5" name="message" required></textarea>
-        </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn btn-success mt-3">Enviar</button>
-        </div>
-      </form>
-    </div>
-  </section>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 AlcoMatch. Todos los derechos reservados.</p>
+        <aside class="hero-panel floating-card">
+          <p class="panel-kicker">MIX LAB</p>
+          <h2>Configura el mood de hoy</h2>
+          <div class="taste-filters" role="tablist" aria-label="Perfiles de sabor">
+            <button class="taste-filter is-active" data-profile="fresh" role="tab" aria-selected="true">Fresh</button>
+            <button class="taste-filter" data-profile="bold" role="tab" aria-selected="false">Bold</button>
+            <button class="taste-filter" data-profile="slow" role="tab" aria-selected="false">Slow</button>
+          </div>
+          <div class="mix-result" id="mix-result">
+            <h3 id="profile-title">Fresh Circuit</h3>
+            <p id="profile-description">Cocteles ligeros, citricos y de baja densidad para sesiones largas.</p>
+            <ul id="profile-list">
+              <li>Spritz de pomelo con romero</li>
+              <li>Gin tonic de pepino y sal marina</li>
+              <li>Kombucha rum punch</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="stats reveal" id="metricas">
+      <div class="container stat-grid">
+        <article class="stat-item">
+          <p class="stat-value" data-count="980" data-suffix="+">0</p>
+          <p class="stat-label">matches semanales generados</p>
+        </article>
+        <article class="stat-item">
+          <p class="stat-value" data-count="142" data-suffix="+">0</p>
+          <p class="stat-label">rutas de sabor disponibles</p>
+        </article>
+        <article class="stat-item">
+          <p class="stat-value" data-count="86" data-suffix="%">0</p>
+          <p class="stat-label">precision media en feedback</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="experiencia">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">EXPERIENCIA DE PRODUCTO</p>
+          <h2>Arquitectura de interfaz pensada para exploracion profunda</h2>
+          <p>Combinamos lenguaje editorial, paneles de control y feedback inmediato para que la web transmita valor desde el primer scroll.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <p class="feature-tag">01 | Flavor Graph</p>
+            <h3>Mapa sensorial de usuario</h3>
+            <p>Clasifica afinidades por acidez, cuerpo, dulzor y final para ajustar recetas en tiempo real.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-tag">02 | Stock Engine</p>
+            <h3>Inventario con lectura contextual</h3>
+            <p>Las sugerencias cambian segun disponibilidad y temperatura de servicio recomendada.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-tag">03 | Match Feed</p>
+            <h3>Feed curado por sesiones</h3>
+            <p>Priorizacion dinamica de recetas para pre, prime y cierre de evento.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-tag">04 | Story Layer</p>
+            <h3>Narrativa visual de cada trago</h3>
+            <p>Cada recomendacion incluye ritmo musical, colorimetria y maridaje de ambiente.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-tag">05 | Crew Mode</p>
+            <h3>Listas colaborativas por grupo</h3>
+            <p>Votacion rapida para decidir combinaciones con conflicto minimo entre gustos.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-tag">06 | Precision Loop</p>
+            <h3>Aprendizaje por feedback micro</h3>
+            <p>Un sistema de rating corto afina el perfil sin friccion para el usuario final.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="funciona">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">COMO FUNCIONA</p>
+          <h2>Pipeline de recomendacion en tres bloques</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-card">
+            <span>Fase 01</span>
+            <h3>Diagnostico inicial de gusto</h3>
+            <p>El usuario responde un test breve y AlcoMatch monta un primer vector de preferencias.</p>
+          </article>
+          <article class="timeline-card">
+            <span>Fase 02</span>
+            <h3>Cruce con inventario activo</h3>
+            <p>El sistema interpreta existencias para mostrar solo recetas posibles en ese momento.</p>
+          </article>
+          <article class="timeline-card">
+            <span>Fase 03</span>
+            <h3>Refinado por contexto social</h3>
+            <p>Sesion privada, terraza o afterwork alteran el peso de cada variable en tiempo real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="escenarios">
+      <div class="container scenario-layout">
+        <div class="section-head">
+          <p class="eyebrow">ESCENARIOS</p>
+          <h2>Un mismo motor, tres formatos de experiencia</h2>
+        </div>
+        <div class="scenario-tabs" role="tablist" aria-label="Escenarios de uso">
+          <button class="scenario-tab is-active" data-scenario="house" aria-selected="true">House Session</button>
+          <button class="scenario-tab" data-scenario="terrace" aria-selected="false">Terrace Pulse</button>
+          <button class="scenario-tab" data-scenario="afterwork" aria-selected="false">Afterwork Grid</button>
+        </div>
+        <article class="scenario-panel" id="scenario-panel">
+          <h3 id="scenario-title">House Session</h3>
+          <p id="scenario-description">Recetas de bajo esfuerzo, setup rapido y perfiles redondos para grupos pequenos.</p>
+          <ul id="scenario-list">
+            <li>Listas de compra instantaneas por numero de invitados</li>
+            <li>Modo cocina sin coctelera con sustituciones automaticas</li>
+            <li>Playbook de maridajes para picoteo rapido</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="comunidad">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">COMUNIDAD</p>
+          <h2>Testimonios de equipos y creadores de experiencias</h2>
+        </div>
+        <div class="testimonial-shell">
+          <button class="slider-btn" id="prev-testimonial" aria-label="Anterior testimonio">&larr;</button>
+          <div class="testimonial-track" id="testimonial-track">
+            <article class="testimonial is-active">
+              <p>"Pasamos de improvisar a planificar sesiones con una precision brutal en solo dos semanas."</p>
+              <strong>Lucia M. | Event Host</strong>
+            </article>
+            <article class="testimonial">
+              <p>"El inventario inteligente nos ahorro tiempo y evito compras duplicadas en cada montaje."</p>
+              <strong>Ruben K. | Food Studio</strong>
+            </article>
+            <article class="testimonial">
+              <p>"La capa social es lo mejor: cada miembro vota y el sistema propone un consenso elegante."</p>
+              <strong>Ana P. | Community Lead</strong>
+            </article>
+          </div>
+          <button class="slider-btn" id="next-testimonial" aria-label="Siguiente testimonio">&rarr;</button>
+        </div>
+        <div class="slider-dots" id="slider-dots" aria-label="Indicadores de testimonios">
+          <button class="dot is-active" data-index="0" aria-label="Ver testimonio 1"></button>
+          <button class="dot" data-index="1" aria-label="Ver testimonio 2"></button>
+          <button class="dot" data-index="2" aria-label="Ver testimonio 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal contact-section" id="contacto">
+      <div class="container contact-grid">
+        <article class="contact-copy">
+          <p class="eyebrow">CONTACTO</p>
+          <h2>Lleva AlcoMatch a tu proyecto o evento</h2>
+          <p>
+            Si quieres acceso anticipado, integraciones o una demo privada, envia un mensaje.
+            Respondemos en menos de 24 horas con plan de despliegue.
+          </p>
+          <ul>
+            <li>Onboarding guiado para equipos</li>
+            <li>Plantillas de sesiones por objetivo</li>
+            <li>Soporte para activaciones de marca</li>
+          </ul>
+        </article>
+
+        <form id="contact-form" action="https://formspree.io/f/xaneaane" method="POST" novalidate>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Cuentanos que quieres construir" required></textarea>
+
+          <button class="button button-solid" type="submit">Enviar solicitud</button>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>&copy; 2026 AlcoMatch. Todos los derechos reservados.</p>
+      <a href="#top">Volver arriba</a>
+    </div>
   </footer>
 
-  <!-- Validación Bootstrap -->
-  <script>
-    (() => {
-      'use strict';
-      const forms = document.querySelectorAll('.needs-validation');
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    })();
-  </script>
-
-  <script src="/JS/script.js"></script>
+  <script src="JS/script.js"></script>
 </body>
 </html>
